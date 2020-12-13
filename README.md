@@ -1,8 +1,8 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidAudioConverter-green.svg?style=true)](https://android-arsenal.com/details/1/4341) [![Release](https://jitpack.io/v/adrielcafe/AndroidAudioConverter.svg)](https://jitpack.io/#adrielcafe/AndroidAudioConverter)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidAudioConverter-green.svg?style=true)](https://android-arsenal.com/details/1/4341) [![Release](https://jitpack.io/v/octsjimmy/AndroidAudioConverter.svg)](https://jitpack.io/#octsjimmy/AndroidAudioConverter)
 
 # AndroidAudioConverter
 
-> Convert audio files inside your Android app easily. This is a wrapper of [FFmpeg-Android-Java](https://github.com/WritingMinds/ffmpeg-android-java) lib.
+> Convert audio files inside your Android app easily. This is a wrapper of [Mobile-FFmpeg](https://github.com/tanersener/mobile-ffmpeg) lib.
 
 Supported formats:
 * AAC
@@ -12,7 +12,7 @@ Supported formats:
 * WAV
 * FLAC
 
-Lib size: ~9mb
+Lib size: ~35mb
 
 ## How To Use
 
@@ -78,12 +78,12 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+  implementation 'com.github.octsjimmy:AndroidAudioConverter:${lastest_version}'
 }
 ```
 
 ## Dependencies
-* [FFmpeg-Android-Java](https://github.com/WritingMinds/ffmpeg-android-java)
+* [Mobile-FFmepg](https://github.com/tanersener/mobile-ffmpeg)
 
 ## Want to RECORD AUDIO into your app?
 **Take a look at [AndroidAudioRecorder](https://github.com/adrielcafe/AndroidAudioRecorder)! Example of usage [here](https://github.com/adrielcafe/AndroidAudioRecorder/issues/8#issuecomment-247311572).**
