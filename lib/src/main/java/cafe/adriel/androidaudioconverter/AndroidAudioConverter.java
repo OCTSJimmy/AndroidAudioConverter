@@ -76,7 +76,11 @@ public class AndroidAudioConverter {
             FFmpeg.executeAsync(cmd, new ExecuteCallback() {
                 @Override
                 public void apply(long executionId, int returnCode) {
-                    callback.onSuccess(convertedFile);
+                    if(returnCode == 0) {
+                        callback.onSuccess(convertedFile);
+                    } else {
+                        callback.onFailure(new IOException("Error Code:" + returnCode));
+                    }
                 }
             });
         } catch (Exception e) {
