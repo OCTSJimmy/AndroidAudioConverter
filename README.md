@@ -1,4 +1,4 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidAudioConverter-green.svg?style=true)](https://android-arsenal.com/details/1/4341) [![Release](https://jitpack.io/v/octsjimmy/AndroidAudioConverter.svg)](https://jitpack.io/#octsjimmy/AndroidAudioConverter)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidAudioConverter-green.svg?style=true)](https://android-arsenal.com/details/1/4341) [![Release](https://jitpack.io/v/OCTSJimmy/AndroidAudioConverter.svg)](https://jitpack.io/#OCTSJimmy/AndroidAudioConverter)
 
 # AndroidAudioConverter
 
@@ -57,7 +57,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.octsjimmy:AndroidAudioConverter:${lastest_version}'
+  implementation 'com.github.OCTSJimmy:AndroidAudioConverter:${lastest_version}'
 }
 ```
 
