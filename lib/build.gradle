@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 30
+    buildToolsVersion '30.0.0'
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 24
+        minSdkVersion 24
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -17,8 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile 'com.github.adrielcafe:ffmpeg-android-java:2a627f6ecd@aar'
+//    api 'com.github.adrielcafe:ffmpeg-android-java:v0.3.2'
+//    implementation 'com.arthenica:mobile-ffmpeg-full:4.4'
+    implementation 'com.arthenica:mobile-ffmpeg-audio:4.4'
 }
