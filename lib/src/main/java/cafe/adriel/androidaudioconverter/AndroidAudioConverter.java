@@ -42,6 +42,12 @@ public class AndroidAudioConverter {
         return new AndroidAudioConverter(context);
     }
 
+    private static File getConvertedFile(File originalFile, AudioFormat format) {
+        String[] f = originalFile.getPath().split("\\.");
+        String filePath = originalFile.getPath().replace(f[f.length - 1], format.getFormat());
+        return new File(filePath);
+    }
+
     public AndroidAudioConverter setFile(File originalFile) {
         this.audioFile = originalFile;
         return this;
@@ -76,7 +82,7 @@ public class AndroidAudioConverter {
             FFmpeg.executeAsync(cmd, new ExecuteCallback() {
                 @Override
                 public void apply(long executionId, int returnCode) {
-                    if(returnCode == 0) {
+                    if (returnCode == 0) {
                         callback.onSuccess(convertedFile);
                     } else {
                         callback.onFailure(new IOException("Error Code:" + returnCode));
@@ -86,11 +92,5 @@ public class AndroidAudioConverter {
         } catch (Exception e) {
             callback.onFailure(e);
         }
-    }
-
-    private static File getConvertedFile(File originalFile, AudioFormat format) {
-        String[] f = originalFile.getPath().split("\\.");
-        String filePath = originalFile.getPath().replace(f[f.length - 1], format.getFormat());
-        return new File(filePath);
     }
 }
